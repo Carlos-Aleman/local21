@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %} Mas sobre estadios {% endblock %}
+
+{% block content %}
+
+{% for Estadio in objects %}
+<center><h1>Mas Sobre El Estadio</h1></center>
+			<tr>
+				<td><h2>Nombre del estadio</h2></td>
+				<td>{{ Estadio.content }}</td><br>
+				<td><h2>Ubicacion</h2></td>
+				<td>{{ Estadio.ubicacion }}</td><br>
+				<td><h2>Capacidad</h2>
+				<td>{{ Estadio.capacidad }}</td><br>
+				<td><h2>Equipo local</h2>
+				<td>{{ Estadio.equipo_local }}</td>
+			
+		{% endfor %}
+
+
+{% endblock %}

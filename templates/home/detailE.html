@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %} Index {% endblock %}
+
+{% block content %}
+
+{% for Equipo in objects %}
+<center><h1>Mas Sobre El Equipo</h1></center>
+			<tr>
+				<center><td><h2>Nombre del equipo</h2></td></center>
+				<center><td>{{ Equipo.content }}</td><br></center>
+				<center><td><h2>Liga</h2></td></center>
+				<center><td>{{Equipo.liga}}</td></center>
+				<center><td><h2>Estado</h2></center>
+				<center><td>{{ Equipo.estado }}</td><br></center>
+				<center><td><h2>Campionatos</h2></center>
+				<center><td>{{ Equipo.campionatos }}</td></center>
+			
+		{% endfor %}
+
+{% endblock %}

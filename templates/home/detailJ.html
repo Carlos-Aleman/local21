@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %} Detalles del jugador {% endblock %}
+
+{% block content %}
+
+
+{% for jugador in objects %}
+<center><h1>Mas Sobre El Jugador</h1></center>
+			<tr>
+				<td><h2>Nombre del jugador</h2></td>
+				<td>{{ jugador.content }}</td><br>
+				<td><h2>Apellido</h2></td>
+				<td>{{ jugador.apellido }}</td><br>
+				<td><h2>Edad</h2>
+				<td>{{ jugador.edad }}</td><br>
+				<td><h2>Estatura</h2>
+				<td>{{ jugador.estatura }}</td>
+				<td><h2>Nacionalidad</h2>
+				<td>{{ jugador.nacionalidad }}</td>
+				<td><h2>Equipo</h2>
+				<td>{{ jugador.equipo }}</td>
+				<td><h2>Universidad</h2>
+				<td>{{ jugador.universidad }}</td>
+				<td><h2>Posicion de juego</h2>
+				<td>{{ jugador.posicion }}</td>
+			</tr>
+		{% endfor %}
+		<br>
+		<br>
+		<br>
+<a href="{% url 'jugador' %}"><input type="button" value="Regresar" class="btn btn-primary"></a>
+{% endblock %}
